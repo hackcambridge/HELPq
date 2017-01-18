@@ -152,13 +152,10 @@ Quickstart
 #### Mac OS X, Linux
 
 ```sh
-  ./create_config
   meteor
 ```
 
 #### Windows:
-
-Copy the `private/config.json.template` into `private/config.json`
 
 ```sh
   meteor
@@ -167,8 +164,6 @@ Copy the `private/config.json.template` into `private/config.json`
 Deploy
 ------
 **IMPORTANT**
-
-Without login configuration, you will only be able to login with the admin username and password specified in `private/config.json`.
 
 To change the password of the admin account after deployed, you must manually remove the admin user through the meteor mongo shell, and then redeploy with a new admin username/password value. *This will be changed pretty soon*
 
@@ -183,10 +178,8 @@ Configuration
 
 #### Login
 
-To configure login, edit `private/config.json`
-
-In `private/config.json`, provide the appropriate application id/secret combinations
-for either Facebook or Github authentication, or choose to disable them.
+Change settings in `server/lib/config.js`. You'll notice that some settings are set by environment variables. You can set
+these up manually or include a `.env` in the project root.
 
 #### Branding
 

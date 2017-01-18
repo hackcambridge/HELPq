@@ -1,7 +1,9 @@
+require('dotenv').config();
+
+import config from './lib/config';
+
 // Startup Functions
 Meteor.startup(function(){
-  // Grab the config
-  var config = JSON.parse(Assets.getText('config.json'));
 
   // Create the admin
   createAdmin(config.admin.username, config.admin.password);
