@@ -10,18 +10,33 @@ button.push {
   padding: .7em 1em;
   border: none;
   background: grey;
-  border-bottom: 4px solid grey;
-  border-bottom-color: lighten(grey, 10);
+  position: relative;
   text-transform: uppercase;
+
   transition-duration: .2s;
+
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    height: 4px;
+    left: 0;
+    right: 0;
+    background: lighten(grey, 10);
+    transition-duration: .2s;
+  }
+
+  &:active, &:focus {
+    transform: translate(0, 4px);
+    &:after {
+      bottom: 0;
+      height: 0;
+    }
+  }
 
   &:focus {
     outline: none;
-  }
-
-  &:active {
-    margin-top: 4px;
-    border-bottom-width: 0;
   }
 
   &.small {
@@ -35,42 +50,65 @@ button.push {
   &.disabled {
     opacity: .3;
     cursor: auto;
-    &:active {
-      margin-top: 0;
-      border-bottom-width: 4px;
+    
+    &:active,&:focus {
+      transform: none;
+
+      &:after {
+        bottom: -4px;
+        height: 4px;
+      }
     }
 
   }
 
   &.primary {
     background: $brand-primary;
-    border-bottom-color: lighten($brand-primary, 10);
+
+    &:after {
+      background: lighten($brand-primary, 10);
+    }
   }
 
   &.secondary {
     background: $brand-secondary;
-    border-bottom-color: lighten($brand-secondary, 10);
+
+    &:after {
+      background: lighten($brand-secondary, 10);
+    }
   }
 
   &.success {
     background: $brand-success;
-    border-bottom-color: lighten($brand-success, 10);
+
+    &:after {
+      background: lighten($brand-success, 10);
+    }
   }
 
   &.danger {
     background: $brand-danger;
-    border-bottom-color: lighten($brand-danger, 10);
+
+    &:after {
+      background: lighten($brand-danger, 10);
+    }
   }
 
   &.github {
     color: darken($github-gray, 50);
     background: $github-gray;
-    border-bottom-color: lighten($github-gray, 3);
+
+    &:after {
+      background: lighten($github-gray, 3);
+    }
   }
 
   &.facebook {
     background: $facebook-blue;
-    border-bottom-color: lighten($facebook-blue, 10);
+
+    &:after {
+      background: lighten($facebook-blue, 10);
+    }
   }
 
 
