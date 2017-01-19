@@ -92,3 +92,4 @@ function setBasicSettings(config){
     Settings.insert(config.settings);
   }
 }
+
