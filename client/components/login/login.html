@@ -5,6 +5,10 @@
         {{error}}
       </div>
     {{/if}}
+    {{#if enabled.mymlh}}
+    <button id="login-mymlh" class="fluid mymlh push button"> Login with MyMLH</button>
+    <br>
+    {{/if}}
     <div class="ui login-password form">
 
       <div class="field">
@@ -16,7 +20,7 @@
         <input type="password" id='password' placeholder="Password">
       </div>
       <div class="field">
-        <button id="login-password" class="fluid primary push button"> Login </button>
+        <button id="login-password" class="fluid primary push button"> Login with Password </button>
       </div>
     </div>
 
@@ -28,11 +32,6 @@
     {{#if enabled.facebook}}
     <br>
     <button id="login-facebook" class="fluid facebook push button"> Login with Facebook</button>
-    {{/if}}
-
-    {{#if enabled.mymlh}}
-    <br>
-    <button id="login-mymlh" class="fluid mymlh push button"> Login with MyMLH</button>
     {{/if}}
   </div>
 </template>
