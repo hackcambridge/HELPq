@@ -13,6 +13,11 @@ Template.login.events({
       loginStyle: 'redirect'
     });
   },
+  'click #login-mymlh': function(){
+    Meteor.loginWithMyMlh({
+      loginStyle: 'redirect'
+    });
+  },
   'click #login-password': function(e, t){
     loginPassword(t);
   },

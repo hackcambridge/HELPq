@@ -1,3 +1,8 @@
+import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: path.resolve(process.env.PWD, './.env') });
+
 export default {
   admin: {
     username: 'admin',
@@ -18,9 +23,14 @@ export default {
     clientId: process.env.GOOGLE_CLIENT_ID,
     secret: process.env.GOOGLE_SECRET,
   },
+  mymlh: {
+    enable: true,
+    clientId: process.env.MYMLH_CLIENT_ID,
+    secret: process.env.MYMLH_SECRET,
+  },
   settings: {
     queueEnabled: true,
     expirationDelay: 1800000,
   },
-  defaultMentor: true,
+  defaultMentor: false,
 };

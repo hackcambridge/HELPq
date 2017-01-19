@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 import config from './lib/config';
 
 // Startup Functions
@@ -15,6 +13,7 @@ Meteor.startup(function(){
   addServiceIntegration('github', config.github);
   addFacebookIntegration(config.facebook);
   addServiceIntegration('google', config.google);
+  addServiceIntegration('mymlh', config.mymlh);
 
   // Add Base Settings
   setBasicSettings(config);
