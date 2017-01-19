@@ -8,7 +8,7 @@
 //------------------------------
 
 // Primary color of your brand (Used for primary buttons, glows, etc.)
-$brand-primary: #137DC3;
+$brand-primary: #ea5143;
 
 // Secondary color of your brand (used for secondary buttons)
 $brand-secondary: #FFBF0A;
@@ -52,7 +52,7 @@ $github-gray: #e4e4e4;
 }
 
 @mixin logo-font(){
-  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 700;
 }
 
@@ -67,39 +67,15 @@ $github-gray: #e4e4e4;
 
 // The splash is the login page.
 #splash {
-
-  // There are a few defaults that are here, which you can comment/uncomment,
-  // but you should feel free to change this to whatever you want.
-
-  // Font color
   color: white;
-
-  // Basic white text on brand color:
-  // background: $brand-primary;
-
-  // Single background image covering the entire page
-  // background: url(/assets/images/background.jpg) no-repeat center center;
-  // background-size: cover;
-
-  // Background image that repeats
-  background: url(/assets/images/geometry2.png) repeat;
+  background: $brand-primary;
 }
 
 
 // Banner which appears under the nav, and on each page.
 #banner {
-  // Font color
   color: white;
-
-  // Single background image covering
-  // background: url(/assets/images/background.jpg) no-repeat center center;
-  // background-size: cover;
-
-  // Basic white on brand color:
-  // background: $brand-primary;
-
-  // Repeated Background:
-  background: url(/assets/images/geometry2.png) repeat;
+  background: $brand-primary;
 }
 
 // Footer, which appears on each page.
